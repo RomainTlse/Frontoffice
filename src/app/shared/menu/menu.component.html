@@ -1,0 +1,12 @@
+<div class="menu-block">
+  <span (click)="loadComponent('home')" [ngClass]="{'active':activeMenu==='home'}">CV</span>
+  <span (click)="loadComponent('competence')" [ngClass]="{'active':activeMenu==='competence'}">Cométences</span>
+  <span (click)="loadComponent('experience')" [ngClass]="{'active':activeMenu==='experience'}">Experience</span>
+  <span (click)="loadComponent('formation')" [ngClass]="{'active':activeMenu==='formation'}">Formations</span>
+  <span (click)="loadComponent('interet')" [ngClass]="{'active':activeMenu==='interet'}">Interets</span>
+  <span>
+    <a [routerLink]="['']">
+    <fa-icon [icon]="faHome"></fa-icon>
+  </a>
+  </span>
+</div>

@@ -1,0 +1,73 @@
+@import "../../../variables";
+
+.section--competence{
+  height: 100%;
+  width: 100%;
+
+  .flex-item{
+    z-index: 1;
+  }
+
+  .cv-content{
+    width: calc(100% - 450px);
+    height: 100%;
+
+    .example-headers-align .mat-expansion-panel-header-title,
+    .example-headers-align .mat-expansion-panel-header-description {
+      flex-basis: 0;
+    }
+
+    .example-headers-align .mat-expansion-panel-header-description {
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    mat-form-field {
+      margin-right: 12px;
+    }
+
+    .flex-container{
+      width: 100%;
+
+      .competence--img{
+        width: 150px;
+      }
+
+      .competence--bar{
+        width: 33%;
+      }
+
+      .competence--framework{
+        width: calc(100% - 33% - 160px);
+        padding: 10px 25px;
+        background-color: $backgroundGrey4;
+        margin: 0 5px;
+
+        img{
+          width: 32px;
+          height: 32px;
+          margin: 5px;
+        }
+      }
+    }
+
+    .competence--complementaire{
+      .competence--title{
+        width: 200px;
+      }
+
+      .competence--framework{
+        width: calc(100% - 210px);
+        padding: 10px 25px;
+        background-color: $backgroundGrey4;
+        margin: 0 5px;
+
+        img{
+          width: 64px;
+          height: 64px;
+          margin: 5px;
+        }
+      }
+    }
+  }
+}

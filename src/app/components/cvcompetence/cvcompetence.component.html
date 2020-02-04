@@ -1,0 +1,142 @@
+<section class="section--competence flex-container">
+  <div class="flex-item">
+    <app-presentation></app-presentation>
+  </div>
+  <div class="flex-item cv-content">
+    <!-- Copyright 2019 Google LLC. All Rights Reserved.
+        Use of this source code is governed by an MIT-style license that
+        can be found in the LICENSE file at http://angular.io/license -->
+    <app-menu (outputChild)=loadComponent($event)></app-menu>
+
+    <section class="section--content">
+      <mat-accordion class="example-headers-align">
+        <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Compétences Principales
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="flex-container">
+            <div class="flex-item competence--img">
+              <img src="/assets/images/icones/javascript.png">
+            </div>
+            <div class="flex-item competence--bar">
+              <mat-progress-bar
+                class="example-margin"
+                [color]="color"
+                [mode]="mode"
+                [value]="value"
+                [bufferValue]="bufferValue">
+              </mat-progress-bar>
+            </div>
+            <div class="flex-item competence--framework">
+              <img src="/assets/images/icones/angular.svg">
+              <img src="/assets/images/icones/angularjs.svg">
+              <img src="/assets/images/icones/backbone.svg">
+              <img src="/assets/images/icones/jquery.svg">
+            </div>
+          </div>
+          <br/>
+          <div class="flex-container">
+            <div class="flex-item competence--img">
+              <img src="/assets/images/icones/php.png">
+            </div>
+            <div class="flex-item competence--bar">
+              <mat-progress-bar
+                class="example-margin"
+                [color]="color"
+                [mode]="mode"
+                [value]="valuePhp"
+                [bufferValue]="bufferValue">
+              </mat-progress-bar>
+            </div>
+            <div class="flex-item competence--framework">
+              <img src="/assets/images/icones/zend-framework.svg">
+              <img src="/assets/images/icones/symfony.svg">
+              <img src="/assets/images/icones/cakephp.svg">
+            </div>
+          </div>
+          <br/>
+          <div class="flex-container">
+            <div class="flex-item competence--img">
+              <img src="/assets/images/icones/node.png">
+            </div>
+            <div class="flex-item competence--bar">
+              <mat-progress-bar
+                class="example-margin"
+                [color]="color"
+                [mode]="mode"
+                [value]="valueNode"
+                [bufferValue]="bufferValue">
+              </mat-progress-bar>
+            </div>
+            <div class="flex-item competence--framework">
+              <img src="/assets/images/icones/express.svg">
+              <img src="/assets/images/icones/meteor.svg">
+              <img src="/assets/images/icones/sails.svg">
+            </div>
+          </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle class="competence--complementaire">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Compétences complémentaires
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="flex-container">
+            <div class="flex-item competence--title">
+              Languages & framework
+            </div>
+            <div class="flex-item competence--framework">
+              <img src="/assets/images/icones/css3.svg">
+              <img src="/assets/images/icones/html5.svg">
+              <img src="/assets/images/icones/less.svg">
+              <img src="/assets/images/icones/sass.svg">
+              <img src="/assets/images/icones/typescript.svg">
+              <img src="/assets/images/icones/bootstrap.svg">
+              <img src="/assets/images/icones/material-ui.svg">
+              <img src="/assets/images/icones/java.svg">
+              <img src="/assets/images/icones/hibernate.svg">
+              <img src="/assets/images/icones/spring.svg">
+              <img src="/assets/images/icones/dotnet.svg">
+            </div>
+          </div>
+          <div class="flex-container">
+            <div class="flex-item competence--title">
+              Base de données
+            </div>
+            <div class="flex-item competence--framework">
+              <img src="/assets/images/icones/mysql.svg">
+              <img src="/assets/images/icones/postgresql.svg">
+            </div>
+          </div>
+          <div class="flex-container">
+            <div class="flex-item competence--title">
+              OS
+            </div>
+            <div class="flex-item competence--framework">
+              <img src="/assets/images/icones/windows.svg">
+              <img src="/assets/images/icones/debian.svg">
+              <img src="/assets/images/icones/ubuntu.svg">
+              <img src="/assets/images/icones/suse.svg">
+            </div>
+          </div>
+          <div class="flex-container">
+            <div class="flex-item competence--title">
+              Outils
+            </div>
+            <div class="flex-item competence--framework">
+              <img src="/assets/images/icones/docker.svg">
+              <img src="/assets/images/icones/git.svg">
+              <img src="/assets/images/icones/jenkins.svg">
+              <img src="/assets/images/icones/jetbrains.svg">
+              <img src="/assets/images/icones/netbeans.svg">
+              <img src="/assets/images/icones/visual.svg">
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </section>
+
+  </div>
+</section>

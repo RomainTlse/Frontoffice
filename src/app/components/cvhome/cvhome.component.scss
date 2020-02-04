@@ -1,0 +1,293 @@
+@import "../../../variables";
+
+.flex-container {
+  width: 100%;
+  height: 100%;
+
+  .section--name {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.5s;
+    z-index: 1;
+    transform: rotate(-34deg);
+    left: -100px;
+    top: 10px;
+    display: flex;
+    -webkit-box-align: center;
+
+    .name-block-container {
+      position: relative;
+      height: 108px;
+      width: 55%;
+      margin: auto;
+      -ms-transform: rotate(34deg);
+      -webkit-transform: rotate(34deg);
+      transform: rotate(34deg);
+
+      h1 {
+        text-transform: capitalize;
+        font-weight: 600;
+        color: $backgroundGrey4;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-size: 45px;
+        font-family: 'Kalam', cursive;
+        margin-top: 0;
+
+        span {
+          font-size: 26px;
+          font-weight: 300;
+          display: block;
+          text-transform: capitalize;
+        }
+      }
+
+      h2 {
+        line-height: 26px;
+        margin-top: 0;
+        font-weight: 700;
+        color: $framboise2;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-size: 26px;
+        min-height: 26px;
+        font-family: 'Kalam', cursive;
+      }
+
+      .btn {
+        display: inline-block;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        border-radius: 0;
+        margin: 20px 0;
+        text-transform: uppercase;
+        font-weight: 600;
+        transition: all .3s;
+        position: relative;
+        color: $backgroundGrey4;
+        background-color: $backgroundGrey1;
+        z-index: 20;
+        letter-spacing: 2px;
+        overflow: hidden;
+
+
+      }
+
+      .btn-download {
+        border: none;
+        font-size: 14px;
+        padding: 16px;
+
+        fa-icon {
+          padding-left: 16px;
+        }
+
+        &:hover {
+          border: none;
+          color: $backgroundGrey4;
+          background-color: $backgroundGrey1;
+          letter-spacing: 2px;
+
+          &::before {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-name: fadeOutDown;
+            animation-name: fadeOutDown;
+            -webkit-transform-origin: center bottom;
+            transform-origin: center bottom;
+          }
+
+          &::after {
+            width: 50px;
+            height: 70px;
+            right: -5px;
+            top: -5px;
+            -ms-transform: rotate(15deg);
+            -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+          }
+        }
+
+
+        &::after {
+          content: "";
+          position: absolute;
+          background-color: rgba(0, 0, 0, 0.2);
+          right: 0;
+          top: 0;
+          height: 100%;
+          width: 0;
+          z-index: -1;
+          transition: all .3s;
+        }
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .social {
+        li {
+          display: inline-block;
+          margin-right: 2px;
+          text-align: center;
+        }
+
+        a {
+          border: 2px solid $backgroundGrey4;
+          color: $backgroundGrey4;
+          display: inline-block;
+          height: 35px;
+          width: 35px;
+          transition: all 0.5s;
+
+          &:hover {
+            border: none;
+            color: $backgroundGrey;
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#c72c48+0,c72c48+100&1+0,0+100 */
+            background: -moz-radial-gradient(center, ellipse cover, rgba(199, 44, 72, 1) 0%, rgba(199, 44, 72, 0) 100%); /* FF3.6-15 */
+            background: -webkit-radial-gradient(center, ellipse cover, rgba(199, 44, 72, 1) 0%, rgba(199, 44, 72, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: radial-gradient(ellipse at center, rgba(199, 44, 72, 1) 0%, rgba(199, 44, 72, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c72c48', endColorstr='#00c72c48', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+          }
+
+          fa-icon {
+            font-size: 28px;
+          }
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .competence-block {
+    width: 430px;
+    height: 300px;
+    left: 540px;
+    top: -50px;
+  }
+
+  .experience-block {
+    width: 430px;
+    height: 400px;
+    left: 735px;
+    top: 190px;
+  }
+
+  .formation-block {
+    width: 430px;
+    height: 300px;
+    left: 930px;
+    top: 530px;
+  }
+
+  .interet-block {
+    width: 430px;
+    height: 400px;
+    left: 1141px;
+    top: 25px;
+  }
+
+  .block {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.5s;
+    transform: rotate(-34deg);
+    display: flex;
+    -webkit-box-align: center;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+
+    &:hover {
+      border: 15px solid rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .block-container {
+    position: relative;
+    height: 50px;
+    width: 50%;
+    margin: auto;
+    -ms-transform: rotate(34deg);
+    -webkit-transform: rotate(34deg);
+    transform: rotate(34deg);
+  }
+
+  h2.menu-item {
+    position: relative;
+    color: $backgroundGrey3;
+    margin: 50px;
+    font-size: 28px;
+    font-weight: 600;
+    transition: all 1s ease-out;
+
+    &::before {
+      position: absolute;
+      top: -40px;
+      left: -20px;
+      font-size: 14px;
+      transition: all 0.5s ease;
+    }
+  }
+
+  .menu-item {
+    cursor: pointer;
+  }
+
+  h2.about.menu-item::before {
+    color: $framboise2;
+    content: '01';
+  }
+
+  h2.portfolio.menu-item::before {
+    color: $framboise2;
+    content: '02';
+  }
+
+  h2.blog.menu-item:before {
+    color: $framboise2;
+    content: '03';
+  }
+
+  h2.contact.menu-item:before {
+    color: $framboise2;
+    content: '04';
+  }
+}
+
+.home--icon{
+  position: absolute;
+  right: 100px;
+  z-index: 1;
+  font-size: 30px;
+  bottom: 25px;
+
+  a{
+    color: $framboise;
+  }
+}
+
+.contact--icon{
+  position: absolute;
+  right: 50px;
+  z-index: 1;
+  font-size: 30px;
+  bottom: 25px;
+
+  a{
+    color: $framboise;
+  }
+}

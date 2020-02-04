@@ -1,0 +1,191 @@
+@import "../../variables";
+
+.section--home{
+  display: flex;
+  -webkit-box-align: center;
+  width: 100%;
+  height: 100vh;
+
+  .home--content{
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    background-color: $backgroundGrey1;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+
+    .flex-container{
+      width: 100%;
+      height: 100%;
+
+      .menu{
+        width: 75px;
+        text-align: center;
+        position: relative;
+        height: 100%;
+
+        .icon--content{
+          margin: 15px 0;
+        }
+
+        .icon--content--bottom{
+          position: absolute;
+          bottom: 25px;
+          left: 20px;
+        }
+
+        fa-icon{
+          color: $backgroundGrey4;
+          font-size: 30px;
+          cursor: pointer;
+        }
+        .activeicon{
+          color: $framboise;
+        }
+
+        .download--icon,
+        .contact--icon{
+          & :hover{
+            color: $framboise2;
+          }
+        }
+      }
+
+      .picture{
+        width: 400px;
+        height: 110%;
+        background-image: url("src/assets/images/bg.png");
+        background-position: center center;
+        background-size: auto 100% ;
+        background-repeat: no-repeat;
+        position: relative;
+
+        &::after{
+          content: "";
+          background-color: $framboise;
+          opacity: 0.1;
+          z-index: 36;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+        }
+
+        h1, h2{
+          text-align: center;
+          text-shadow: 2px 2px 5px $framboise4;
+          font-weight: bold;
+          font-family: 'Kalam', cursive;
+          position: absolute;
+          z-index: 40;
+        }
+
+        h1{
+          font-size: 50px;
+          bottom: 100px;
+          color: $backgroundGrey4;
+        }
+
+        h2{
+          padding-top: 25px;
+          font-size: 25px;
+          bottom: 50px;
+          left: 110px;
+          color: $framboise2;
+        }
+
+        .socialnetwork{
+          position: absolute;
+          z-index: 40;
+          bottom: 10px;
+          left: 150px;
+
+          span{
+            border: 2px solid #FFF;
+            color: #FFF;
+            display: inline-block;
+            height: 35px;
+            width: 35px;
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+            text-align: center;
+            margin: 0 1px;
+
+            fa-icon{
+              font-size: 28px;
+              color: white;
+            }
+
+            &:hover {
+              border: none;
+              color: $backgroundGrey;
+              /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#c72c48+0,c72c48+100&1+0,0+100 */
+              background: -moz-radial-gradient(center, ellipse cover, rgba(199, 44, 72, 1) 0%, rgba(199, 44, 72, 0) 100%); /* FF3.6-15 */
+              background: -webkit-radial-gradient(center, ellipse cover, rgba(199, 44, 72, 1) 0%, rgba(199, 44, 72, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+              background: radial-gradient(ellipse at center, rgba(199, 44, 72, 1) 0%, rgba(199, 44, 72, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c72c48', endColorstr='#00c72c48', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+            }
+          }
+        }
+      }
+
+      .separator{
+        width: 5px;
+        height: 110%;
+        background-color: $framboise;
+      }
+
+      .presentation--container{
+        height: 650px;
+        width: calc(100% - 480px);
+
+        .presentation{
+          font-size: 22px;
+          color: $backgroundGrey4;
+          padding: 25px;
+          text-align: justify;
+        }
+
+        .separator{
+          height: 1px;
+          width: 100%;
+          /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#942136+0,942136+50,942136+100&0+0,1+50,0+100 */
+          background: -moz-linear-gradient(left,  rgba(148,33,54,0) 0%, rgba(148,33,54,1) 50%, rgba(148,33,54,0) 100%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(left,  rgba(148,33,54,0) 0%,rgba(148,33,54,1) 50%,rgba(148,33,54,0) 100%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to right,  rgba(148,33,54,0) 0%,rgba(148,33,54,1) 50%,rgba(148,33,54,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00942136', endColorstr='#00942136',GradientType=1 ); /* IE6-9 */
+        }
+
+        .link{
+          width: 100%;
+          height: 500px;
+          text-align: center;
+          margin-top: 25px;
+
+          .cv-card{
+            height: 100%;
+            margin: 10px;
+
+            .mat-card-image:first-child{
+              margin-top: 0;
+            }
+
+            img{
+              max-height: calc(100% - 50px);
+              width: auto;
+            }
+
+            a{
+              text-decoration: none;
+              color: $framboise2;
+
+              button{
+                font-size: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

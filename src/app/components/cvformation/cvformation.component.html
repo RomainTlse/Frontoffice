@@ -1,0 +1,26 @@
+<section class="section--formation flex-container">
+  <div class="flex-item">
+    <app-presentation></app-presentation>
+  </div>
+  <div class="flex-item cv-content">
+    <app-menu (outputChild)=loadComponent($event)></app-menu>
+    <section class="section--interet flex-container">
+      <div class="swiper-wrapper timeline flex-item">
+        <div class="timeline--content">
+          <div class="timeline--start"></div>
+          <div class="swiper-slide" *ngFor="let formation of formations">
+            <div class="timestamp">
+              <span class="date">{{formation.dateLabel}}</span>
+            </div>
+            <div class="status">
+              <span>{{formation.title}}</span>
+            </div>
+          </div>
+          <div class="timeline--stop">
+            <fa-icon [icon]="faChevronRight"></fa-icon>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>

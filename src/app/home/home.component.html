@@ -1,0 +1,59 @@
+<section class="section--home">
+  <div class="home--content">
+    <div class="flex-container">
+      <div class="flex-item menu">
+        <div class="icon--content">
+          <fa-icon [icon]="faHome" class="activeicon"></fa-icon>
+        </div>
+        <br/>
+        <div class="icon--content contact--icon">
+          <a [routerLink]="['/contact']">
+            <fa-icon [icon]="faIdCard"></fa-icon>
+          </a>
+        </div>
+        <div class="icon--content--bottom download--icon">
+          <a target="_blank" href="/assets/documents/cv-Romain_Montaut.pdf">
+            <fa-icon [icon]="faCloudDownloadAlt"></fa-icon>
+          </a>
+        </div>
+      </div>
+      <div class="flex-item picture">
+        <h1>
+          Romain MONTAUT
+        </h1>
+        <h2>
+          D&eacute;veloppeur Web
+        </h2>
+        <div class="socialnetwork">
+          <span class="icon">
+            <a target="_blank" href="https://www.linkedin.com/in/romain-montaut-94ab70163/"><fa-icon [icon]="faLinkedin"></fa-icon></a>
+          </span>
+          <span class="icon">
+            <a target="_blank" href="https://github.com/RomainTlse"><fa-icon [icon]="faGithub"></fa-icon></a>
+          </span>
+        </div>
+      </div>
+      <div class="flex-item separator"></div>
+      <div class="flex-item presentation--container">
+        <div class="presentation">
+          Développeur Web depuis 10 ans, j'ai eu l'opportunité de travailler dans plusieurs entreprises,
+          aussi bien dans le développement fullstack que front.
+          <br/>
+          Vous pouvez accèder par le lien ci-dessous à mon CV.
+        </div>
+        <div class="separator"></div>
+        <div class="link">
+          <mat-card class="cv-card">
+            <img mat-card-image src="/assets/images/cv.png">
+            <mat-card-actions>
+              <a [routerLink]="['/cv']">
+                <button mat-button>CV</button>
+              </a>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

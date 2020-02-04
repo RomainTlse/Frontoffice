@@ -1,0 +1,48 @@
+<div class="flex-container">
+  <div class="flex-item section--name">
+    <div class="name-block-container">
+      <h1><span>CV</span>Romain MONTAUT</h1>
+      <h2>D&eacute;veloppeur Web</h2>
+      <a target="_blank" href="/assets/documents/cv-Romain_Montaut.pdf" class="btn btn-download">Download Resume<span><fa-icon [icon]="faCloudDownloadAlt"></fa-icon></span></a>
+      <ul class="social">
+        <li><a target="_blank" href="https://www.linkedin.com/in/romain-montaut-94ab70163/"><fa-icon [icon]="faLinkedin"></fa-icon></a></li>
+        <li><a target="_blank" href="https://github.com/RomainTlse"><fa-icon [icon]="faGithub"></fa-icon></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="flex-item">
+    <div class="competence-block block" (click)="loadComponent('competence')">
+      <div class="block-container">
+        <h2 class="about menu-item">Comp&eacute;tences</h2>
+      </div>
+    </div>
+    <div class="experience-block block" (click)="loadComponent('experience')">
+      <div class="block-container">
+        <h2 class="portfolio menu-item">&Eacute;xp&eacute;riences professionnelles</h2>
+      </div>
+    </div>
+    <div class="formation-block block" (click)="loadComponent('formation')">
+      <div class="block-container">
+        <h2 class="blog menu-item">Formations</h2>
+      </div>
+    </div>
+  </div>
+  <div class="flex-item">
+    <div class="interet-block block" (click)="loadComponent('interet')">
+      <div class="block-container">
+        <h2 class="contact menu-item">Centres d'int&eacute;r&ecirc;ts</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="icon--content home--icon">
+  <a [routerLink]="['']">
+    <fa-icon [icon]="faHome"></fa-icon>
+  </a>
+</div>
+<br/>
+<div class="icon--content contact--icon">
+  <a [routerLink]="['/contact']">
+    <fa-icon [icon]="faIdCard"></fa-icon>
+  </a>
+</div>

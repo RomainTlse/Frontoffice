@@ -1,0 +1,95 @@
+<section class="flex-container section--experience">
+  <div class="flex-item">
+    <app-presentation></app-presentation>
+  </div>
+  <div class="flex-item cv-content">
+    <app-menu (outputChild)=loadComponent($event)></app-menu>
+    <div class="flex-container">
+      <section class="flex-item section--experience--data">
+        <div class="titre--xp">{{experience.titre}}</div>
+        <div class="entreprise--xp">{{experience.entreprise}}</div>
+        <div *ngIf="experience.client" class="entreprise--client">
+          <div class="experience--section">Client :</div>
+          <div class="client--preembauche">{{experience.client}}</div>
+        </div>
+        <div *ngIf="experience.preembauche" class="entreprise--preembauche">
+          <div class="experience--section">Pré-embauche :</div>
+          <div class="client--preembauche">{{experience.preembauche}}</div>
+        </div>
+        <div class="realisation--xp">
+          <div class="experience--section">Réalisations :</div>
+          <mat-list>
+            <mat-list-item *ngFor="let realisation of experience.realisations">{{realisation}}</mat-list-item>
+          </mat-list>
+        </div>
+        <div class="context--xp">
+          <div class="experience--section">Context :</div>
+          <mat-list>
+            <mat-list-item *ngFor="let context of experience.context">{{context}}</mat-list-item>
+          </mat-list>
+        </div>
+        <div class="context--xp">
+          <div class="experience--section">Technologies :</div>
+          <div class="experience--langage">
+            {{langages}}
+          </div>
+        </div>
+        <div class="context--xp">
+          <div class="experience--section">Outils :</div>
+          <div class="experience--outils">
+            {{outils}}
+          </div>
+        </div>
+      </section>
+      <section class="flex-item section--experience--date flex-container-vertical">
+        <div class="chevron--end">
+          <fa-icon [icon]="faChevronUp"></fa-icon>
+        </div>
+        <section class="section--date flex-item-vertical" (click)="updateData(0)">
+          <div class="circle--date" [ngClass]="{'active':activeXp===0}">
+          </div>
+          <div class="experience--date" [ngClass]="{'active':activeXp===0}">
+            Depuis le 16/09/2019
+          </div>
+        </section>
+        <section class="section--date flex-item-vertical" (click)="updateData(1)">
+          <div class="circle--date" [ngClass]="{'active':activeXp===1}"></div>
+          <div class="experience--date"  [ngClass]="{'active':activeXp===1}">
+            De 01/2017 à 08/2019
+          </div>
+        </section>
+        <section class="section--date flex-item-vertical" (click)="updateData(2)">
+          <div class="circle--date" [ngClass]="{'active':activeXp===2}"></div>
+          <div class="experience--date" [ngClass]="{'active':activeXp===2}">
+            De 09/2014 à 08/2016
+          </div>
+        </section>
+        <section class="section--date flex-item-vertical"(click)="updateData(3)">
+          <div class="circle--date" [ngClass]="{'active':activeXp===3}"></div>
+          <div class="experience--date" [ngClass]="{'active':activeXp===3}">
+            De 02/2014 à 08/2014
+          </div>
+        </section>
+        <section class="section--date flex-item-vertical"(click)="updateData(4)">
+          <div class="circle--date" [ngClass]="{'active':activeXp===4}"></div>
+          <div class="experience--date" [ngClass]="{'active':activeXp===4}">
+            De 09/2010 à 01/2014
+          </div>
+        </section>
+        <section class="section--date flex-item-vertical"(click)="updateData(5)">
+          <div class="circle--date" [ngClass]="{'active':activeXp===5}"></div>
+          <div class="experience--date" [ngClass]="{'active':activeXp===5}">
+            De 02/2010 à 08/2010
+          </div>
+        </section>
+        <section class="section--date flex-item-vertical"(click)="updateData(6)">
+          <div class="circle--date" [ngClass]="{'active':activeXp===6}"></div>
+          <div class="experience--date" [ngClass]="{'active':activeXp===6}">
+            Projet personnel
+          </div>
+        </section>
+        <div class="chevron--start"></div>
+      </section>
+    </div>
+  </div>
+</section>

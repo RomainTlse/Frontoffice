@@ -1,0 +1,95 @@
+@import "../../variables";
+
+.section--contact {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  .home{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 28px;
+    cursor: pointer;
+
+    a{
+      font-size: 28px;
+      color: $framboise;
+    }
+  }
+
+  h1{
+    text-transform: capitalize;
+    font-weight: 600;
+    color: $backgroundGrey4;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 45px;
+    font-family: 'Kalam', cursive;
+    margin-top: 0;
+    padding-left: 15px;
+  }
+
+  .flex-container{
+    width: 100%;
+    height: calc(100% - 82px);
+
+    .flex-item {
+      z-index: 1;
+      padding: 0 10px;
+    }
+
+    .contact--form--container{
+      max-width: 500px;
+
+      .info--contact{
+        color: $backgroundGrey4;
+        padding: 10px 0;
+
+        fa-icon {
+          padding-right:  10px;
+          color: $framboise2;
+          font-size: 23px;
+        }
+      }
+      .contact--form {
+        width: 100%;
+
+        .example-full-width {
+          width: 100%;
+          color: $backgroundGrey4;
+        }
+
+        fa-icon {
+          padding-left: 10px;
+        }
+      }
+
+      .separator{
+        margin: 10px 0;
+        height: 1px;
+        width: 100%;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#942136+0,942136+50,942136+100&0+0,1+50,0+100 */
+        background: -moz-linear-gradient(left,  rgba(148,33,54,0) 0%, rgba(148,33,54,1) 50%, rgba(148,33,54,0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  rgba(148,33,54,0) 0%,rgba(148,33,54,1) 50%,rgba(148,33,54,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  rgba(148,33,54,0) 0%,rgba(148,33,54,1) 50%,rgba(148,33,54,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00942136', endColorstr='#00942136',GradientType=1 ); /* IE6-9 */
+      }
+
+      .contact--title{
+        margin-top: 50px;
+        color: $framboise;
+        font-size: 45px;
+      }
+    }
+
+    .maps{
+      width: calc(100% - 500px);
+
+      agm-map {
+        height: 750px;
+      }
+    }
+  }
+
+}

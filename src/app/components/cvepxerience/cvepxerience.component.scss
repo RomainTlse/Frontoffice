@@ -1,0 +1,184 @@
+@import "../../../variables";
+
+.section--experience{
+  height: 100%;
+  width: 100%;
+
+  .flex-item{
+    z-index: 1;
+  }
+
+  .cv-content {
+    width: calc(100% - 450px);
+    height: 100%;
+    position: relative;
+
+    .flex-container{
+      height: calc(100% - 72px);
+      width: 100%;
+      position: relative;
+
+      &::after {
+        content: '';
+        background-color: $backgroundGrey1;
+        opacity: 0.9;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+    }
+
+    .section--experience--data{
+      width: calc(100% - 300px);
+      height: auto;
+      color: $backgroundGrey4;
+
+      .titre--xp{
+        font-size: 25px;
+        width: 400px;
+        height: 50px;
+        line-height: 50px;
+        background-color: $backgroundGrey2;
+        color: $backgroundGrey4;
+        display: inline-block;
+        padding-left: 25px;
+      }
+
+      .entreprise--xp{
+        display: inline-block;
+        font-size: 22px;
+        height: 50px;
+        width: auto;
+        line-height: 50px;
+        background-color: $backgroundGrey3;
+        color: $framboise;
+        padding: 0 10px;
+        text-align: right;
+      }
+
+      .entreprise--client,
+      .entreprise--preembauche,
+      .realisation--xp{
+        padding: 15px;
+      }
+
+      .client--preembauche,
+      .experience--outils{
+        padding: 15px 25px;
+      }
+
+      .context--xp{
+        padding: 15px;
+
+        .experience--langage{
+          padding: 15px 25px;
+          color: $framboise;
+          font-weight: 600;
+        }
+      }
+
+      .experience--section{
+        font-size: 17px;
+        font-weight: 600;
+      }
+    }
+
+    .flex-container-vertical {
+      display: -ms-inline-flexbox;
+      display: -webkit-inline-flex;
+      display: inline-flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+      align-content: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .flex-item-vertical {
+      -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+      -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+      align-self: auto;
+    }
+
+    .section--experience--date{
+      width: 300px;
+      height: 100%;
+      z-index: 1;
+      border-left: $backgroundGrey4 3px solid;
+      position: relative;
+
+      .chevron--end{
+        color: $backgroundGrey4;
+        position: absolute;
+        left: -12px;
+        top: -8px;
+        z-index: 1;
+        font-size: 25px;
+      }
+
+      .chevron--start{
+        color: $backgroundGrey4;
+        position: absolute;
+        left: -11px;
+        bottom: 0;
+        width: 20px;
+        height: 1px;
+        border-bottom: $backgroundGrey4 3px solid;
+      }
+
+      .section--date{
+        margin: 10px 0;
+        position: relative;
+        cursor: pointer;
+
+        .circle--date{
+          border: $backgroundGrey4 6px solid;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          position: absolute;
+          left: -37.5px;
+          top: 13px;
+          background-color: $backgroundGrey;
+
+          &.active{
+            background-color: $framboise;
+          }
+        }
+
+        .experience--date{
+          width: 250px;
+          margin: auto;
+          padding: 15px 25px;
+          background-color: $backgroundGrey2;
+          color: $backgroundGrey4;
+
+          &.active{
+            background-color: $backgroundGrey3;
+            color: $framboise4;
+            font-weight: bold;
+            -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+            -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+          }
+        }
+      }
+    }
+  }
+}

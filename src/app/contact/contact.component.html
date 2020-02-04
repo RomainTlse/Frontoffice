@@ -1,0 +1,53 @@
+<section class="section--contact">
+  <h1>
+    Romain Montaut
+  </h1>
+  <div class="home">
+    <a [routerLink]="['']">
+      <fa-icon [icon]="faHome"></fa-icon>
+    </a>
+  </div>
+  <div class="flex-container">
+    <div class="flex-item contact--form--container">
+      <div class="info--contact">
+        <fa-icon [icon]="faMapMarkedAlt"></fa-icon> 145 rue des templiers 31370 POUCHARRAMET
+      </div>
+      <div class="info--contact">
+        <fa-icon [icon]="faMobileAlt"></fa-icon> 06.98.44.08.83
+      </div>
+      <div class="info--contact">
+        <fa-icon [icon]="faEnvelope"></fa-icon> montaut.romain@gmail.com
+      </div>
+      <div class="separator"></div>
+      <div class="contact--title">Contact</div>
+      <form class="contact--form">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Nom">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Prénom">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Email">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Message"></textarea>
+        </mat-form-field>
+
+        <button mat-button color="primary">
+          Envoie Message<fa-icon [icon]="faPaperPlane"></fa-icon>
+        </button>
+      </form>
+    </div>
+
+    <div class="flex-item maps">
+      <agm-map [latitude]="latMap" [longitude]="lngMap" [zoom]="11" class="flex-item">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+      </agm-map>
+    </div>
+  </div>
+</section>
+
