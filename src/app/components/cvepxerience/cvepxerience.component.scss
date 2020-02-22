@@ -4,6 +4,32 @@
   height: 100%;
   width: 100%;
 
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 30px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $backgroundGrey3;
+    border-radius: 30px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $framboise1;
+    border-radius: 30px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $framboise4;
+  }
+
   .flex-item{
     z-index: 1;
   }
@@ -30,30 +56,33 @@
     }
 
     .section--experience--data{
-      width: calc(100% - 300px);
-      height: auto;
+      width: calc(100% - 320px);
+      height: 100%;
       color: $backgroundGrey4;
+      margin-right: 20px;
+      overflow-y: auto;
+
+      fa-icon{
+        margin-right: 10px;
+        color: $framboise1;
+      }
 
       .titre--xp{
         font-size: 25px;
         width: 400px;
-        height: 50px;
-        line-height: 50px;
-        background-color: $backgroundGrey2;
         color: $backgroundGrey4;
         display: inline-block;
-        padding-left: 25px;
+        padding: 10px 25px;
+        font-family: 'Orbitron', sans-serif;
       }
 
       .entreprise--xp{
         display: inline-block;
         font-size: 22px;
-        height: 50px;
         width: auto;
-        line-height: 50px;
-        background-color: $backgroundGrey3;
+        font-family: 'Orbitron', sans-serif;
         color: $framboise;
-        padding: 0 10px;
+        padding: 10px 25px;
         text-align: right;
       }
 
@@ -73,14 +102,15 @@
 
         .experience--langage{
           padding: 15px 25px;
-          color: $framboise;
-          font-weight: 600;
+          color: $backgroundGrey4;
         }
       }
 
       .experience--section{
         font-size: 17px;
-        font-weight: 600;
+        font-weight: 500;
+        color: $backgroundGrey4;
+        font-family: 'Orbitron', sans-serif;
       }
     }
 

@@ -1,6 +1,13 @@
-import {Component, EventEmitter, HostListener, OnInit, Output} from '@angular/core';
+import {Component, ElementRef, EventEmitter, HostListener, OnInit, Output, ViewChild} from '@angular/core';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { faPenSquare } from '@fortawesome/free-solid-svg-icons';
+import { faBuilding } from '@fortawesome/free-solid-svg-icons';
+import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
+import { faToolbox } from '@fortawesome/free-solid-svg-icons';
+import { faUserCog } from '@fortawesome/free-solid-svg-icons';
 import {ExperiencesService} from '../../services/experiences.service';
+
+let viewChild = ViewChild;
 
 @Component({
   selector: 'app-cvepxerience',
@@ -10,9 +17,16 @@ import {ExperiencesService} from '../../services/experiences.service';
 export class CvepxerienceComponent implements OnInit {
 
   @Output() output = new EventEmitter<string>();
+  viewHeight: number;
 
   faChevronUp = faChevronUp;
+  faPenSquare = faPenSquare;
+  faBuilding = faBuilding;
+  faLaptopCode = faLaptopCode;
+  faToolbox = faToolbox;
+  faUserCog = faUserCog;
   activeXp = 0;
+  showAscensor = false;
 
   private experience;
   private langages;

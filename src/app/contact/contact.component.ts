@@ -4,6 +4,7 @@ import { faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons';
 import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-contact',
@@ -16,6 +17,7 @@ export class ContactComponent implements OnInit {
   public lng: number;
   public latMap: number;
   public lngMap: number;
+  faLinkedin = faLinkedin;
   faPaperPlane = faPaperPlane;
   faMapMarkedAlt = faMapMarkedAlt;
   faMobileAlt = faMobileAlt;

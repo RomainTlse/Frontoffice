@@ -9,33 +9,33 @@
         <div class="titre--xp">{{experience.titre}}</div>
         <div class="entreprise--xp">{{experience.entreprise}}</div>
         <div *ngIf="experience.client" class="entreprise--client">
-          <div class="experience--section">Client :</div>
+          <div class="experience--section"><fa-icon [icon]="faBuilding"></fa-icon>Client :</div>
           <div class="client--preembauche">{{experience.client}}</div>
         </div>
         <div *ngIf="experience.preembauche" class="entreprise--preembauche">
-          <div class="experience--section">Pré-embauche :</div>
+          <div class="experience--section"><fa-icon [icon]="faBuilding"></fa-icon>Pré-embauche :</div>
           <div class="client--preembauche">{{experience.preembauche}}</div>
         </div>
+        <div class="context--xp">
+          <div class="experience--section"><fa-icon [icon]="faUserCog"></fa-icon>Context :</div>
+          <mat-list>
+            <mat-list-item *ngFor="let context of experience.context">{{context}}</mat-list-item>
+          </mat-list>
+        </div>
         <div class="realisation--xp">
-          <div class="experience--section">Réalisations :</div>
+          <div class="experience--section"><fa-icon [icon]="faPenSquare"></fa-icon>Réalisations :</div>
           <mat-list>
             <mat-list-item *ngFor="let realisation of experience.realisations">{{realisation}}</mat-list-item>
           </mat-list>
         </div>
         <div class="context--xp">
-          <div class="experience--section">Context :</div>
-          <mat-list>
-            <mat-list-item *ngFor="let context of experience.context">{{context}}</mat-list-item>
-          </mat-list>
-        </div>
-        <div class="context--xp">
-          <div class="experience--section">Technologies :</div>
+          <div class="experience--section"><fa-icon [icon]="faLaptopCode"></fa-icon>Technologies :</div>
           <div class="experience--langage">
             {{langages}}
           </div>
         </div>
         <div class="context--xp">
-          <div class="experience--section">Outils :</div>
+          <div class="experience--section"><fa-icon [icon]="faToolbox"></fa-icon>Outils :</div>
           <div class="experience--outils">
             {{outils}}
           </div>
