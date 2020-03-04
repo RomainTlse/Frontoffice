@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CvModule } from './cv/cv.module';
-import { HomeModule } from './home/home.module';
+import { CvModule } from './pages/cv/cv.module';
+import { HomeModule } from './pages/home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ContactModule } from './contact/contact.module';
+import { ContactModule } from './pages/contact/contact.module';
 
 @NgModule({
   imports: [

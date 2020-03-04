@@ -1,11 +1,11 @@
 import {Component, ComponentFactoryResolver, OnInit, ViewChild} from '@angular/core';
 import {CvDirective} from './cv.directive';
-import {CvhomeComponent} from '../components/cvhome/cvhome.component';
-import {CvcompetenceComponent} from '../components/cvcompetence/cvcompetence.component';
-import {CvepxerienceComponent} from '../components/cvepxerience/cvepxerience.component';
-import {CvformationComponent} from '../components/cvformation/cvformation.component';
-import {CvinteretComponent} from '../components/cvinteret/cvinteret.component';
-import {MenuService} from '../services/menu.service';
+import {CvhomeComponent} from '../../components/cvhome/cvhome.component';
+import {CvcompetenceComponent} from '../../components/cvcompetence/cvcompetence.component';
+import {CvepxerienceComponent} from '../../components/cvepxerience/cvepxerience.component';
+import {CvformationComponent} from '../../components/cvformation/cvformation.component';
+import {CvinteretComponent} from '../../components/cvinteret/cvinteret.component';
+import {MenuService} from '../../services/menu.service';
 
 interface IComp {
   output: any;

@@ -19,8 +19,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FontAwesomeModule,
   ],
   exports: [
-    HomeComponent
+    HomeComponent,
   ],
-  declarations: [HomeComponent],
+  declarations: [
+    HomeComponent,
+  ],
 })
 export class HomeModule { }
