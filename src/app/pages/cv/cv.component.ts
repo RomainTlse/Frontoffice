@@ -1,3 +1,7 @@
+/**
+ * component utilisé pour la page cv
+ */
+
 import {Component, ComponentFactoryResolver, OnInit, ViewChild} from '@angular/core';
 import {CvDirective} from './cv.directive';
 import {CvhomeComponent} from '../../components/cvhome/cvhome.component';
@@ -20,13 +24,26 @@ export class CvComponent implements OnInit {
 
   @ViewChild(CvDirective, {static: true}) appCvContent: CvDirective;
 
+  /**
+   * @constructor
+   * @param componentFactoryResolver
+   * @param menuService
+   */
   constructor(private componentFactoryResolver: ComponentFactoryResolver,
               private menuService: MenuService) { }
 
+  /**
+   * @description Init the component
+   */
   ngOnInit() {
     this.loadComponent('home');
   }
 
+  /**
+   * @name loadComponent
+   * @description définit dynamiquement le composant fils
+   * @param component
+   */
   loadComponent(component) {
     let componentFactory;
 

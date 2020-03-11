@@ -22,7 +22,9 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
       apiKey: 'AIzaSyAUYXcxVvUyjlcMpeNqBYtvqloc0qV7z2o'
     })
   ],
-  exports: [ContactComponent],
+  exports: [
+    ContactComponent,
+  ],
   declarations: [
     ContactComponent,
   ],

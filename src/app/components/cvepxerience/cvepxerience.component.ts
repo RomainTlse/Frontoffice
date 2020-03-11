@@ -26,7 +26,6 @@ export class CvepxerienceComponent implements OnInit {
   faToolbox = faToolbox;
   faUserCog = faUserCog;
   activeXp = 0;
-  showAscensor = false;
 
   private experience;
   private langages;
