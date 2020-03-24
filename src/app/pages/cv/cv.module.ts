@@ -18,7 +18,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-import {MatListModule} from '@angular/material';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
