@@ -14,7 +14,7 @@ export class CvformationComponent implements OnInit {
 
   faChevronRight = faChevronRight;
 
-  private formations;
+  public formations;
 
   constructor(private formationsService: FormationsService) { }
 

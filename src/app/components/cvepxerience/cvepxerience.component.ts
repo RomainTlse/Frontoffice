@@ -27,9 +27,9 @@ export class CvepxerienceComponent implements OnInit {
   faUserCog = faUserCog;
   activeXp = 0;
 
-  private experience;
-  private langages;
-  private outils;
+  public experience;
+  public langages;
+  public outils;
 
   constructor(private experiencesService: ExperiencesService) { }
 

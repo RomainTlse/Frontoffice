@@ -11,7 +11,7 @@ export class MenuComponent implements OnInit {
 
   @Output() outputChild = new EventEmitter<string>();
 
-  private activeMenu: string;
+  public activeMenu: string;
 
   faHome = faHome;
   constructor(private menuService: MenuService) { }
